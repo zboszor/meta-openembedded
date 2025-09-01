@@ -1,0 +1,43 @@
+Signed-off-by: Zoltán Böszörményi <zboszor@gmail.com>
+
+--- node-v14.17.1/deps/v8/src/base/logging.h.old	2021-06-15 13:23:08.000000000 +0200
++++ node-v14.17.1/deps/v8/src/base/logging.h	2024-01-19 17:36:50.107390764 +0100
+@@ -6,6 +6,7 @@
+ #define V8_BASE_LOGGING_H_
+ 
+ #include <cstring>
++#include <cstdint>
+ #include <sstream>
+ #include <string>
+ 
+--- node-v14.17.1/deps/v8/src/base/macros.h.old	2024-01-19 17:36:05.340908636 +0100
++++ node-v14.17.1/deps/v8/src/base/macros.h	2024-01-19 17:36:25.235122893 +0100
+@@ -6,6 +6,7 @@
+ #define V8_BASE_MACROS_H_
+ 
+ #include <limits>
++#include <cstdint>
+ #include <type_traits>
+ 
+ #include "src/base/compiler-specific.h"
+--- node-v14.21.3/deps/v8/src/inspector/v8-string-conversions.h.old	2024-01-20 08:40:16.745599651 +0100
++++ node-v14.21.3/deps/v8/src/inspector/v8-string-conversions.h	2024-01-20 08:41:02.646029781 +0100
+@@ -5,6 +5,7 @@
+ #ifndef V8_INSPECTOR_V8_STRING_CONVERSIONS_H_
+ #define V8_INSPECTOR_V8_STRING_CONVERSIONS_H_
+ 
++#include <cstdint>
+ #include <string>
+ 
+ // Conversion routines between UT8 and UTF16, used by string-16.{h,cc}. You may
+diff -durpN node-v14.21.3.old/src/inspector/worker_inspector.h node-v14.21.3/src/inspector/worker_inspector.h
+--- node-v14.21.3.old/src/inspector/worker_inspector.h	2023-02-16 16:32:29.000000000 +0100
++++ node-v14.21.3/src/inspector/worker_inspector.h	2025-09-01 11:24:07.330044105 +0200
+@@ -5,6 +5,7 @@
+ #error("This header can only be used when inspector is enabled")
+ #endif
+ 
++#include <cstdint>
+ #include <memory>
+ #include <string>
+ #include <unordered_map>
