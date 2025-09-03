@@ -1,0 +1,34 @@
+From 392e60be7371362c1149a9825d7644df86416692 Mon Sep 17 00:00:00 2001
+From: Lukas Oberhuber <lukaso@gmail.com>
+Date: Sat, 30 Oct 2021 23:57:34 +0100
+Subject: [PATCH] Issue 288: Build failure due to dependency
+
+According to the meson docs, dependencies between generated headers the
+ultimate users, need to be declared, as ninja will run
+builds out of order.
+
+This attempts to fix this, but without being absolutely sure the
+dependency is correctly recorded. In any case, the build is working.
+---
+ gegl/meson.build | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/gegl/meson.build b/gegl/meson.build
+index cfd176d45..86c7a6fa1 100644
+--- a/gegl/meson.build
++++ b/gegl/meson.build
+@@ -91,6 +91,11 @@ install_headers(gegl_headers,
+ 
+ gegl_ldflags = os_osx ? ['-framework', 'OpenCL'] : []
+ 
++opencl_dep = declare_dependency(
++    sources : [opencl_headers],
++    link_with : [gegl_sources],
++)
++
+ gegl_lib = library(api_name,
+   gegl_sources,
+   include_directories: [rootInclude, geglInclude],
+-- 
+2.51.0
+

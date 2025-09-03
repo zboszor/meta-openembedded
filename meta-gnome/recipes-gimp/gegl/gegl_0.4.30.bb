@@ -24,6 +24,8 @@ SHPV = "${@gnome_verdir("${PV}")}"
 SRC_URI = " \
     https://download.gimp.org/pub/${BPN}/${SHPV}/${BP}.tar.xz \
     file://0001-Fix-build-with-OpenEXR-3.patch \
+    file://0001-Issue-288-Build-failure-due-to-dependency.patch \
+    file://0001-Include-opencl_dep-as-a-dependency-in-gegl_lib-targe.patch \
 "
 SRC_URI[sha256sum] = "c112782cf4096969e23217ccdfabe42284e35d5435ff0c43d40e4c70faeca8dd"
 
