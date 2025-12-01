@@ -1,0 +1,23 @@
+Signed-off-by: Zoltán Böszörményi <zboszor@gmail.com>
+Upstream-Status: Backport
+
+--- proj-9.1.1/src/apps/cct.cpp.old	2022-12-01 09:50:03.000000000 +0100
++++ proj-9.1.1/src/apps/cct.cpp	2025-12-01 13:14:49.355829164 +0100
+@@ -78,6 +78,7 @@
+ #include <string.h>
+ #include <stdarg.h>
+ 
++#include <cstdint>
+ #include <fstream> // std::ifstream
+ #include <iostream>
+ 
+--- proj-9.1.1/src/apps/cs2cs.cpp.old	2022-12-01 09:50:03.000000000 +0100
++++ proj-9.1.1/src/apps/cs2cs.cpp	2025-12-01 13:16:28.046211199 +0100
+@@ -36,6 +36,7 @@
+ #include <string.h>
+ 
+ #include <cassert>
++#include <cstdint>
+ #include <iostream>
+ #include <string>
+ #include <vector>
