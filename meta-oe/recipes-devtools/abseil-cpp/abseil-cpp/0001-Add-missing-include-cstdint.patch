@@ -1,0 +1,30 @@
+From cce844d47b368413635db8d589cd935d01816752 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Zolt=C3=A1n=20B=C3=B6sz=C3=B6rm=C3=A9nyi?=
+ <zboszor@gmail.com>
+Date: Wed, 3 Dec 2025 13:58:52 +0100
+Subject: [PATCH] Add missing #include <cstdint>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Zoltán Böszörményi <zboszor@gmail.com>
+Upstream-Status: Backport
+---
+ absl/container/internal/container_memory.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/absl/container/internal/container_memory.h b/absl/container/internal/container_memory.h
+index f59ca4ee..e407f604 100644
+--- a/absl/container/internal/container_memory.h
++++ b/absl/container/internal/container_memory.h
+@@ -17,6 +17,7 @@
+ 
+ #include <cassert>
+ #include <cstddef>
++#include <cstdint>
+ #include <cstring>
+ #include <memory>
+ #include <new>
+-- 
+2.52.0
+
