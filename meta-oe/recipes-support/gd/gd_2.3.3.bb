@@ -24,6 +24,7 @@ SRCREV = "b5319a41286107b53daa0e08e402aa1819764bdc"
 inherit autotools binconfig gettext pkgconfig
 
 EXTRA_OECONF += " --disable-rpath \
+                  --disable-werror \
                   --with-jpeg=${STAGING_LIBDIR}/.. \
                   --with-freetype=yes \
                   --without-fontconfig \
