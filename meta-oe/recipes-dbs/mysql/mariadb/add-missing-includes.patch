@@ -1,0 +1,13 @@
+Signed-off-by: Zoltán Böszörmenyi <zboszor@gmail.com>
+Upstream-Status: Inappropriate
+
+--- mariadb-10.7.8/storage/rocksdb/rocksdb/include/rocksdb/compaction_filter.h.old	2023-02-01 16:33:56.000000000 +0100
++++ mariadb-10.7.8/storage/rocksdb/rocksdb/include/rocksdb/compaction_filter.h	2026-06-11 11:28:48.587788675 +0200
+@@ -9,6 +9,7 @@
+ #pragma once
+ 
+ #include <cassert>
++#include <cstdint>
+ #include <memory>
+ #include <string>
+ #include <vector>
