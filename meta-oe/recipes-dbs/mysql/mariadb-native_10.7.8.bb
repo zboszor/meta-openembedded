@@ -6,6 +6,11 @@ DEPENDS = "ncurses-native zlib-native bison-native libpcre2-native \
 gnutls-native fmt-native \
 "
 
+SRC_URI += "file://add-missing-includes.patch"
+
+CFLAGS += "-std=gnu17"
+CXXFLAGS += "-std=gnu++17"
+
 RDEPENDS:${PN} = ""
 PACKAGES = ""
 EXTRA_OEMAKE = ""
