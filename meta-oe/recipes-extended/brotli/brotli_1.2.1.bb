@@ -6,8 +6,8 @@ BUGTRACKER = "https://github.com/google/brotli/issues"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${S}/LICENSE;md5=941ee9cd1609382f946352712a319b4b"
 
-SRC_URI = "git://github.com/google/brotli.git;branch=v1.1;protocol=https"
-SRCREV = "db0631dfea829194206d269bc7b25d0908cdb97d"
+SRC_URI = "git://github.com/google/brotli.git;branch=v1.2;protocol=https"
+SRCREV = "db24a98aed38a16de78cc05ca15cdd8dc2a0d92d"
 
 
 inherit cmake lib_package
