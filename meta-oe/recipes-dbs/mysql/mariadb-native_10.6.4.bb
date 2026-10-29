@@ -4,7 +4,10 @@ inherit native
 PROVIDES += "mysql5-native"
 DEPENDS = "ncurses-native zlib-native bison-native libpcre2-native"
 
-SRC_URI += "file://add-missing-includes.patch"
+SRC_URI += " \
+	file://add-missing-includes.patch \
+	file://0001-Fix-building-with-gcc-16-evex512-removal.patch \
+"
 
 CFLAGS += "-std=gnu17"
 CXXFLAGS += "-std=gnu++17"
